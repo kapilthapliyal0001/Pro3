@@ -2,7 +2,7 @@
   {
     "id": 0,
     "name": "Carbonara",
-    "image": "/assets/images/carbonara.jpg",
+    "image": "https://www.thespruceeats.com/thmb/7fmL528T22esx3Ocjk6oFBrHw6s=/1333x1000/smart/filters:no_upscale()/pasta-carbonara-recipe-5210168-hero-01-80090e56abc04ca19d88ebf7fad1d157.jpg",
     "category": "mains",
     "label": "Fat",
     "price": "7.99",
@@ -27,7 +27,7 @@
   {
     "id": 1,
     "name": "Amatriciana",
-    "image": "/assets/images/amatriciana.jpg",
+    "image": "https://www.tavolartegusto.it/wp/wp-content/uploads/2022/04/Amatriciana.jpg",
     "category": "mains",
     "label": "Spicy",
     "price": "6.99",
@@ -45,7 +45,7 @@
   {
     "id": 2,
     "name": "Cacio & Pepe",
-    "image": "/assets/images/cacioepepe.jpg",
+    "image": "https://www.giallozafferano.it/images/ricette/219/21989/foto_hd/hd650x433_wm.jpg",
     "category": "mains",
     "label": "Cheesy",
     "price": "7.99",
@@ -70,7 +70,7 @@
   {
     "id": 3,
     "name": "Gricia",
-    "image": "/assets/images/gricia.jpg",
+    "image": "https://www.buttalapasta.it/wp-content/uploads/2013/10/pasta-alla-gricia.jpg",
     "category": "mains",
     "label": "Fat+",
     "price": "8.99",
@@ -102,7 +102,7 @@
   {
     "id": 4,
     "name": "Scogliera",
-    "image": "/assets/images/scogliera.jpg",
+    "image": "https://www.travel365.it/foto/scogliere-etretat-normandia-francia.jpg",
     "category": "seafood",
     "label": "Summer",
     "price": "7.99",

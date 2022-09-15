@@ -2,30 +2,36 @@
 
 import { Col, Row, Container, Carousel } from "react-bootstrap";
 import dishes from "../data/menu.json";
+import { Component } from "react";
 
-const Home = () => (
-  <Container>
-    <Row className="justify-content-center mt-2">
-      <Col xs={12} md={6}>
-        <Carousel>
-          {dishes.map((dish) => (
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src="https://www.americanoceans.org/wp-content/uploads/2021/08/Sea-vs-Ocean-.jpg"
-                alt="Second slide"
-              />
+class Home extends Component {
+  render() {
+    return (
+      <Container>
+        <h1>Welcome to the Kapil Real Restaurant Buissness</h1>
+        <Row className="justify-content-center mt-2">
+          <Col xs={12} md={6}>
+            <Carousel>
+              {/* {map} */}
+              {dishes.map((dish) => (
+                <Carousel.Item key={dish.id}>
+                  <img
+                    className="d-block w-100"
+                    src={dish.image}
+                    alt="Second slide"
+                  />
 
-              <Carousel.Caption>
-                <h3>{dish.name}</h3>
-                <p>{dish.description}</p>
-              </Carousel.Caption>
-            </Carousel.Item>
-          ))}
-        </Carousel>
-      </Col>
-    </Row>
-  </Container>
-);
-
+                  <Carousel.Caption>
+                    <h3>{dish.name}</h3>
+                    <p>{dish.description}</p>
+                  </Carousel.Caption>
+                </Carousel.Item>
+              ))}
+            </Carousel>
+          </Col>
+        </Row>
+      </Container>
+    );
+  }
+}
 export default Home;
