@@ -3,18 +3,29 @@
 import { Col, Row, Container, Carousel } from "react-bootstrap";
 import dishes from "../data/menu.json";
 import { Component } from "react";
+import { ListGroup } from "react-bootstrap";
 
 class Home extends Component {
+  state = {
+    selected: null,
+  };
   render() {
     return (
       <Container>
         <h1>Welcome to the Kapil Real Restaurant Buissness</h1>
-        <Row className="justify-content-center mt-2">
+        <Row className="justify-content-center mt-4">
           <Col xs={12} md={6}>
             <Carousel>
               {/* {map} */}
               {dishes.map((dish) => (
-                <Carousel.Item key={dish.id}>
+                <Carousel.Item
+                  key={dish.id}
+                  onClick={() =>
+                    this.setState({
+                      selected: dish,
+                    })
+                  }
+                >
                   <img
                     className="d-block w-100"
                     src={dish.image}
@@ -28,6 +39,21 @@ class Home extends Component {
                 </Carousel.Item>
               ))}
             </Carousel>
+          </Col>
+        </Row>
+        <Row className="justify-content-center mt-3">
+          <Col xs={12} md={6}>
+            List group is here
+            <ListGroup>
+              {this.state.selected ? (
+                this.state.selected.comments.map((c) => (
+                  <ListGroup.Item key={c.id}>{c.comment}</ListGroup.Item>
+                ))
+              ) : (
+                <h1>No comments</h1>
+              )}
+            </ListGroup>
+            export default DefaultExample;
           </Col>
         </Row>
       </Container>
