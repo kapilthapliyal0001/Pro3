@@ -15,6 +15,49 @@ class ReservationForm extends Component {
     },
   };
 
+  submitReservation = async (e) => {
+    e.preventDefault();
+    console.log("I am about to send the reservation");
+    console.log(this.state.reservation);
+
+    // try {
+    //   let res = await fetch(
+    //     "https://striveschool.herokuapp.com/api/reservation",
+    //     {
+    //       method: "POST",
+    //       body: JSON.stringify(this.state.reservation),
+    //       headers: {
+    //         "Content-type": "application/json",
+    //       },
+    //     }
+    //   );
+    //   console.log(res.ok);
+
+    //   if (res.ok) {
+    //     alert("Reservation saved");
+    //     this.setState({
+    //       reservation: {
+    //         reservation: {
+    //           name: "",
+    //           phone: "",
+    //           persons: 1,
+    //           smoking: false,
+    //           date_time: "",
+    //           specialRequests: "",
+    //         },
+    //       },
+    //     });
+    //   } else {
+    //     alert("We have a problem");
+    //   }
+    // } catch (error) {
+    //   console.log(error);
+    // }
+    fetch("https://striveschool.herokuapp.com/api/reservation")
+      .then((res) => console.log(res.ok))
+      .catch((err) => console.log(err));
+  };
+
   inputChange = (e) => {
     let id = e.target.id;
 
@@ -27,7 +70,7 @@ class ReservationForm extends Component {
   };
   render() {
     return (
-      <Form>
+      <Form onSubmit={(e) => this.submitReservation(e)}>
         <Form.Group className="mb-3">
           <Form.Label>Name</Form.Label>
           <Form.Control
