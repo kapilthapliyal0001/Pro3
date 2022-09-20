@@ -5,6 +5,9 @@ import dishes from "../data/menu.json";
 import { Component } from "react";
 import { ListGroup } from "react-bootstrap";
 
+// Importing component
+import Reservations from "./Reservations";
+
 class Home extends Component {
   state = {
     selected: null,
@@ -53,7 +56,11 @@ class Home extends Component {
                 <h1>No comments</h1>
               )}
             </ListGroup>
-            export default DefaultExample;
+          </Col>
+        </Row>
+        <Row className="justify-content-center mt-3">
+          <Col xs={12} md={6}>
+            <Reservations />
           </Col>
         </Row>
       </Container>
