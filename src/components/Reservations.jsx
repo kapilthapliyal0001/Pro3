@@ -13,6 +13,9 @@ export default class Reservations extends Component {
     isError: false,
   };
 
+  componentDidUpdate(prevProps, prevState) {
+    console.log("checking the component did update ");
+  }
   componentDidMount = async () => {
     // component did mount is fired whenever there
     // this place is perfect for the fetches
